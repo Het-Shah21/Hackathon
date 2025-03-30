@@ -1,0 +1,187 @@
+/* Color Variables */
+* {
+    -primary-color: #4a6fa5;
+    -secondary-color: #166088;
+    -accent-color: #4fc3dc;
+    -light-color: #e8f1f5;
+    -dark-color: #1e3d59;
+    -error-color: #e74c3c;
+    -success-color: #2ecc71;
+}
+
+/* Root Styles */
+.root {
+    -fx-background-color: -light-color;
+    -fx-background-image: linear-gradient(45deg, rgba(74, 111, 165, 0.1) 25%, transparent 25%, transparent 50%, rgba(74, 111, 165, 0.1) 50%, rgba(74, 111, 165, 0.1) 75%, transparent 75%, transparent);
+    -fx-background-size: 100px 100px;
+}
+
+/* Container Styles */
+.container {
+    -fx-padding: 20px;
+}
+
+/* Login Card Styles */
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);
+}
+
+/* Header Styles */
+.login-header {
+    -fx-background-color: -primary-color;
+    -fx-padding: 20px;
+}
+
+.header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.header-subtitle {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-opacity: 0.9;
+}
+
+/* Decorative Bubbles */
+.bubbles {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 100%;
+}
+
+.bubble {
+    -fx-fill: -accent-color;
+    -fx-opacity: 0.3;
+}
+
+/* Form Styles */
+.login-form {
+    -fx-padding: 25px;
+    -fx-spacing: 15px;
+}
+
+.form-group {
+    -fx-spacing: 8px;
+}
+
+.form-group Label {
+    -fx-text-fill: -dark-color;
+    -fx-font-weight: 500;
+}
+
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 6px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focus, .password-field:focus {
+    -fx-border-color: -primary-color;
+    -fx-effect: dropshadow(three-pass-box, rgba(74, 111, 165, 0.2), 5, 0, 0, 0);
+}
+
+/* Login Options */
+.login-options {
+    -fx-alignment: center-left;
+    -fx-spacing: 60px;
+    -fx-font-size: 12px;
+}
+
+.remember-me {
+    -fx-alignment: center-left;
+    -fx-spacing: 5px;
+}
+
+.hyperlink {
+    -fx-text-fill: -secondary-color;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: -primary-color;
+    -fx-underline: true;
+}
+
+/* Button Styles */
+.btn {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.btn:hover {
+    -fx-background-color: -secondary-color;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.btn:active {
+    -fx-effect: none;
+}
+
+/* Register Link */
+.register-link {
+    -fx-padding: 15px 0 0 0;
+    -fx-spacing: 5px;
+}
+
+/* Error Pane Styles */
+.error-pane {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+.error-content {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-max-width: 300px;
+    -fx-alignment: center;
+}
+
+.error-text {
+    -fx-text-fill: -error-color;
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.error-btn {
+    -fx-background-color: -error-color;
+    -fx-text-fill: white;
+    -fx-min-width: 100px;
+}
+
+
+/* Footer Style */
+.app-version {
+    -fx-text-fill: -dark-color;
+    -fx-opacity: 0.7;
+    -fx-font-size: 12px;
+    -fx-padding: 10px 0 0 0;
+}
+
+/* Add Animation Styles for Bubbles */
+.bubble:nth-child(1) {
+    -fx-translate-x: 0;
+    -fx-translate-y: 0;
+}
+
+.bubble:nth-child(2) {
+    -fx-translate-x: 0;
+    -fx-translate-y: 0;
+}
+
+.bubble:nth-child(3) {
+    -fx-translate-x: 0;
+    -fx-translate-y: 0;
+}
