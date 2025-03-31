@@ -1,0 +1,58 @@
+/* Setting Bank Account Page Styles */
+
+/* General Styles */
+.root {
+    -fx-background-color: #ffffff;
+}
+
+/* Pane Styling */
+Pane {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-border-radius: 10;
+    -fx-padding: 20;
+    -fx-border-color: #1b8082;
+    -fx-border-width: 2px;
+}
+
+/* Labels */
+Label {
+    -fx-text-fill: #20a4a5;
+    -fx-font-size: 18px;
+    -fx-font-family: "Ebrima Bold";
+}
+
+Label[underline="true"] {
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+}
+
+/* Buttons */
+Button {
+    -fx-background-color: #1b8082;
+    -fx-text-fill: white;
+    -fx-font-family: 'Ebrima';
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 20px;
+    -fx-cursor: hand;
+}
+
+Button:hover {
+    -fx-background-color: #5fffe1;
+}
+
+Button:pressed {
+    -fx-background-color: #17c1a8;
+}
+
+/* Transparent button styles (for info icons) */
+Button[style*="-fx-background-color: transparent;"] {
+    -fx-cursor: hand;
+}
+
+/* Tooltip styling */
+.tooltip {
+    -fx-text-fill: white;
+}

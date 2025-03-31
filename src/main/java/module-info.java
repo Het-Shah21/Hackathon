@@ -11,6 +11,9 @@ module com.example.hackathon {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires java.net.http;
+    requires org.json;
+    requires java.mail;
 
     opens com.example.hackathon to javafx.fxml;
     exports com.example.hackathon;

@@ -56,6 +56,32 @@ public class LoginScreen {
         registerButton.setVisible(false);
         login.setVisible(false);
 
+        Tooltip emailTooltip = new Tooltip("Invalid email format!");
+        emailTooltip.setStyle("-fx-background-color: red; -fx-text-fill: white;");
+
+        emailField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (isValidEmail(newValue)) {
+                emailField.setStyle("-fx-border-color: green;");
+                Tooltip.uninstall(emailField, emailTooltip);
+            } else {
+                emailField.setStyle("-fx-border-color: red;");
+                Tooltip.install(emailField, emailTooltip);
+            }
+        });
+
+        Tooltip phoneTooltip = new Tooltip("Phone number must be exactly 10 digits!");
+        phoneTooltip.setStyle("-fx-background-color: red; -fx-text-fill: white;");
+
+        phoneNumberTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (isValidPhoneNumber(newValue)) {
+                phoneNumberTextField.setStyle("-fx-border-color: green;");
+                Tooltip.uninstall(phoneNumberTextField, phoneTooltip);
+            } else {
+                phoneNumberTextField.setStyle("-fx-border-color: red;");
+                Tooltip.install(phoneNumberTextField, phoneTooltip);
+            }
+        });
+
         loginButton.setOnAction(e -> {
 
             String username = usernameField.getText();
@@ -70,6 +96,11 @@ public class LoginScreen {
             }
 
             if (DBUtils.isLoggedIn(username, password)) {
+                DBUtils.updateRecentLogin(username);
+                DataStore.getInstance().setUsername(username);
+                DataStore.getInstance().setTransPin(DBUtils.getTransactionPin(username));
+                DataStore.getInstance().setEmail(DBUtils.getEmail(username));
+                DataStore.getInstance().setPhoneNumber(DBUtils.getPhoneNumber(username));
                 stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
                 DBUtils.changeScene(stage, "main.fxml");
             } else {
@@ -118,6 +149,12 @@ public class LoginScreen {
                 alert.setContentText("Please enter all fields");
                 alert.show();
                 return;
+            } else if (DBUtils.isUserExists(usernameField.getText())) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setContentText("User already exists");
+                alert.show();
+                return;
             }
 
             String nameString = nameTextField.getText();
@@ -135,5 +172,13 @@ public class LoginScreen {
             stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
             DBUtils.changeScene(stage, "setting-bank-account.fxml");
         });
+    }
+
+    private boolean isValidEmail(String email) {
+        return email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
+    }
+
+    private boolean isValidPhoneNumber(String phone) {
+        return phone.matches("\\d{10}"); // Ensures exactly 10 digits
     }
 }

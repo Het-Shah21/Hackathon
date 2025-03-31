@@ -1,0 +1,204 @@
+/* main.css */
+
+/* Global Styles */
+* {
+    -fx-font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.main-container {
+    -fx-background-color: #f8f9fa;
+}
+
+/* Header Styles */
+.content-header {
+    -fx-background-color: linear-gradient(to right, #1a3a6e, #2a5298);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+    -fx-padding: 15 20 15 20;
+}
+
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Content Area */
+.content-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-padding: 0;
+}
+
+.content-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Instruction Container */
+.instruction-container {
+    -fx-background-color: #e9f5fe;
+    -fx-background-radius: 8;
+    -fx-border-color: #b8daff;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 15;
+}
+
+.instruction-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #0d47a1;
+    -fx-wrap-text: true;
+}
+
+/* Form Elements */
+.form-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.text-field, .combo-box, .date-picker, .text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-color: #dfe3e9;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+    -fx-padding: 8;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .combo-box:focused, .date-picker:focused, .text-area:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(three-pass-box, rgba(52,152,219,0.2), 5, 0, 0, 0);
+}
+
+.text-area {
+    -fx-padding: 5;
+}
+
+.text-area .content {
+    -fx-background-color: white;
+    -fx-padding: 5;
+}
+
+.combo-box .list-cell {
+    -fx-padding: 5 10 5 10;
+    -fx-text-fill: #2c3e50;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* CheckBox styling */
+.check-box {
+    -fx-font-size: 14px;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #dfe3e9;
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #27ae60;
+    -fx-border-color: #27ae60;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.check-box:hover .box {
+    -fx-border-color: #3498db;
+}
+
+/* Submit Container */
+.submit-container {
+    -fx-padding: 20 0 20 0;
+    -fx-border-color: #eaecef;
+    -fx-border-width: 1 0 0 0;
+    -fx-margin-top: 20;
+}
+
+/* Buttons */
+.primary-button {
+    -fx-background-color: #e63946;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.primary-button:hover {
+    -fx-background-color: #c1121f;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #a01017;
+}
+
+.primary-button:disabled {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #a0a0a0;
+    -fx-opacity: 0.8;
+}
+
+.secondary-button {
+    -fx-background-color: #f8f9fa;
+    -fx-text-fill: #2c3e50;
+    -fx-border-color: #dfe3e9;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.secondary-button:pressed {
+    -fx-background-color: #dde2e6;
+}
+
+/* File Upload */
+#fileSelectedLabel {
+    -fx-text-fill: #6c757d;
+    -fx-font-style: italic;
+}
+
+/* Scrollbar styling */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 10;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #cdcdcd;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #b0b0b0;
+}
+
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow {
+    -fx-background-color: transparent;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" styleClass="main-container" stylesheets="@../styles/chatbot.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hackathon.ChatbotController">
+    <top>
+        <HBox alignment="CENTER_LEFT" styleClass="content-header">
+            <padding>
+                <Insets bottom="10" left="20" right="20" top="10" />
+            </padding>
+            <Label styleClass="page-title" text="FortiFi AI Assistant" />
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fx:id="chatScrollPane" fitToWidth="true" styleClass="content-scroll-pane">
+            <VBox fx:id="chatContainer" spacing="15" styleClass="chat-container">
+                <padding>
+                    <Insets bottom="20" left="20" right="20" top="20" />
+                </padding>
+
+                <!-- Welcome message -->
+                <HBox styleClass="assistant-message-container">
+                    <VBox styleClass="assistant-message">
+                        <Label styleClass="message-text" text="Hello! I'm your FortiFi AI Assistant. How can I help you today?" wrapText="true" />
+                        <Label styleClass="message-time" text="Just now" />
+                    </VBox>
+                </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="10" styleClass="chat-input-container">
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+            <TextField fx:id="messageInput" onAction="#sendMessage" promptText="Type your message here..." HBox.hgrow="ALWAYS" />
+            <Button onAction="#sendMessage" styleClass="primary-button" text="Send" />
+        </HBox>
+    </bottom>
+</BorderPane>

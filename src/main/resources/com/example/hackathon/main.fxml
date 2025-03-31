@@ -5,6 +5,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -25,8 +28,12 @@
 
             <!-- App Logo and Title -->
             <HBox alignment="CENTER_LEFT" spacing="12" styleClass="logo-container">
-                <Circle radius="16" styleClass="logo-circle" />
-                <Label styleClass="app-title" text="FraudGuard AI" />
+            <ImageView fitHeight="74.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@CroppedLogo.jpg" />
+               </image>
+            </ImageView>
+                <Label styleClass="app-title" text="FortiFi" />
             </HBox>
 
             <Separator styleClass="sidebar-separator">
@@ -38,10 +45,10 @@
             <!-- Navigation Menu -->
             <VBox spacing="8" VBox.vgrow="ALWAYS">
                 <Button styleClass="nav-button, nav-button-active" text="Dashboard" />
-                <Button styleClass="nav-button" text="Analytics" />
-                <Button styleClass="nav-button" text="Alerts" />
-                <Button styleClass="nav-button" text="Users" />
-                <Button styleClass="nav-button" text="Settings" />
+                <Button fx:id="pay" styleClass="nav-button" text="Pay" />
+                <!-- New Buttons -->
+                <Button onAction="#openChatbot" styleClass="nav-button" text="Chatbot" />
+                <Button onAction="#openReportFraud" styleClass="nav-button" text="Report Fraud" />
             </VBox>
 
             <!-- User Profile Section -->
@@ -49,7 +56,7 @@
                 <HBox alignment="CENTER_LEFT" spacing="10">
                     <Circle radius="16" styleClass="profile-circle" />
                     <VBox>
-                        <Label styleClass="user-name" text="John Doe" />
+                        <Label styleClass="user-name" text="Pratham" />
                         <Label styleClass="user-role" text="Admin" />
                     </VBox>
                 </HBox>
@@ -90,13 +97,11 @@
                         <VBox styleClass="summary-card">
                             <Label styleClass="summary-title" text="Total Transactions" />
                             <Label styleClass="summary-value" text="35,243" />
-                            <Label styleClass="summary-subtitle-positive" text="+14% from last month" />
                         </VBox>
 
                         <VBox styleClass="summary-card">
                             <Label styleClass="summary-title" text="Flagged Transactions" />
                             <Label styleClass="summary-value" text="42" />
-                            <Label styleClass="summary-subtitle-negative" text="-5% from last month" />
                         </VBox>
 
                         <VBox styleClass="summary-card">
@@ -125,10 +130,13 @@
                             <VBox styleClass="transaction-card" GridPane.columnIndex="0">
                                 <HBox>
                                     <VBox HBox.hgrow="ALWAYS">
-                                        <Label styleClass="card-title" text="Credit Card Transaction" />
+                                        <Label styleClass="card-title" text="Credit Card Transaction">
+                                 <tooltip>
+                                    <Tooltip text="Credit Card Transaction" />
+                                 </tooltip></Label>
                                         <Label styleClass="card-subtitle" text="Transaction #1234567" />
                                     </VBox>
-                                    <Label styleClass="risk-badge-high" text="High Risk" />
+                                    <Label prefHeight="22.0" prefWidth="119.0" styleClass="risk-badge-high" text="High Risk" />
                                 </HBox>
 
                                 <Label styleClass="transaction-amount" text="2,500.00" />
@@ -144,10 +152,10 @@
                             <VBox styleClass="transaction-card" GridPane.columnIndex="1">
                                 <HBox>
                                     <VBox HBox.hgrow="ALWAYS">
-                                        <Label styleClass="card-title" text="Wire Transfer" />
+                                        <Label styleClass="card-title" text="Debit Card Transfer" />
                                         <Label styleClass="card-subtitle" text="Transaction #7654321" />
                                     </VBox>
-                                    <Label styleClass="risk-badge-medium" text="Medium Risk" />
+                                    <Label prefHeight="22.0" prefWidth="126.0" styleClass="risk-badge-medium" text="Medium Risk" />
                                 </HBox>
 
                                 <Label styleClass="transaction-amount" text="10,000.00" />
@@ -177,9 +185,9 @@
                                     <Button styleClass="primary-button" text="Investigate" />
                                 </HBox>
                             </VBox>
-                     <rowConstraints>
-                        <RowConstraints />
-                     </rowConstraints>
+                            <rowConstraints>
+                                <RowConstraints />
+                            </rowConstraints>
                         </GridPane>
                     </VBox>
 

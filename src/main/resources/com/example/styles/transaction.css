@@ -1,0 +1,183 @@
+/* Main Theme Colors */
+* {
+    -fx-primary: #3498db;
+    -fx-primary-dark: #2980b9;
+    -fx-secondary: #2c3e50;
+    -fx-light-grey: #ecf0f1;
+    -fx-medium-grey: #bdc3c7;
+    -fx-dark-grey: #7f8c8d;
+
+    -fx-focus-color: -fx-primary;
+
+    /* Risk Level Colors */
+    -fx-risk-green: #2ecc71;
+    -fx-risk-yellow: #f39c12;
+    -fx-risk-red: #e74c3c;
+
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.main-container {
+    -fx-background-color: white;
+}
+
+/* Header Styles */
+.header-container {
+    -fx-background-color: -fx-secondary;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 4);
+}
+
+.header-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Content Area Styles */
+.content-container {
+    -fx-background-color: white;
+}
+
+.section-container {
+    -fx-background-color: -fx-light-grey;
+    -fx-background-radius: 5px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.section-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-secondary;
+}
+
+/* Form Control Styles */
+.text-field, .combo-box, .text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 4px;
+    -fx-border-color: -fx-medium-grey;
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .combo-box:focused, .text-area:focused {
+    -fx-border-color: -fx-primary;
+    -fx-effect: dropshadow(three-pass-box, rgba(52, 152, 219, 0.2), 8, 0, 0, 0);
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: -fx-dark-grey;
+}
+
+.radio-button {
+    -fx-font-size: 14px;
+}
+
+.radio-button .radio {
+    -fx-background-color: white;
+    -fx-border-color: -fx-medium-grey;
+    -fx-border-radius: 50%;
+    -fx-border-width: 1px;
+}
+
+.radio-button:selected .radio .dot {
+    -fx-background-color: -fx-primary;
+    -fx-background-insets: 0;
+}
+
+/* Button Styles */
+.button {
+    -fx-background-radius: 4px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+.primary-button {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+}
+
+.primary-button:hover {
+    -fx-background-color: -fx-primary-dark;
+}
+
+.confirm-button {
+    -fx-background-color: -fx-risk-green;
+    -fx-text-fill: white;
+}
+
+.confirm-button:hover {
+    -fx-background-color: derive(-fx-risk-green, -10%);
+}
+
+.cancel-button {
+    -fx-background-color: -fx-light-grey;
+    -fx-text-fill: -fx-secondary;
+    -fx-border-color: -fx-medium-grey;
+    -fx-border-width: 1px;
+}
+
+.cancel-button:hover {
+    -fx-background-color: -fx-medium-grey;
+}
+
+.button:disabled {
+    -fx-opacity: 0.6;
+}
+
+/* Footer Styles */
+.footer-container {
+    -fx-background-color: -fx-light-grey;
+    -fx-border-color: -fx-medium-grey;
+    -fx-border-width: 1px 0 0 0;
+}
+
+/* Risk Assessment Container Styles */
+.risk-container {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.risk-level-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.risk-message {
+    -fx-font-size: 14px;
+}
+
+.risk-indicator {
+    -fx-arc-width: 5;
+    -fx-arc-height: 5;
+}
+
+.risk-indicator.green {
+    -fx-fill: -fx-risk-green;
+}
+
+.risk-indicator.yellow {
+    -fx-fill: -fx-risk-yellow;
+}
+
+.risk-indicator.red {
+    -fx-fill: -fx-risk-red;
+}
+
+/* Animation */
+.animated-transition {
+    -fx-transition: all 0.3s ease-in-out;
+}

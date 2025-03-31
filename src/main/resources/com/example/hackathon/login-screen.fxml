@@ -14,18 +14,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hackathon.LoginScreen">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../styles/login-screen.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hackathon.LoginScreen">
    <children>
-      <Pane layoutX="306.0" layoutY="37.0" prefHeight="541.0" prefWidth="389.0">
+      <Pane layoutX="306.0" layoutY="22.0" prefHeight="556.0" prefWidth="389.0" stylesheets="@../styles/login-screen.css">
          <children>
-            <Label fx:id="loginOrRegister" alignment="CENTER" layoutX="6.0" layoutY="32.0" prefHeight="53.0" prefWidth="378.0" text="Login" textAlignment="CENTER" underline="true">
+            <Label fx:id="loginOrRegister" alignment="CENTER" layoutX="6.0" layoutY="32.0" prefHeight="53.0" prefWidth="378.0" stylesheets="@../styles/login-screen.css" text="Login" textAlignment="CENTER" underline="true">
                <font>
                   <Font name="Ebrima Bold" size="30.0" />
                </font>
             </Label>
-            <VBox alignment="CENTER" layoutX="19.0" layoutY="85.0">
+            <VBox alignment="CENTER" layoutX="19.0" layoutY="85.0" stylesheets="@../styles/login-screen.css">
                <children>
-                  <GridPane prefHeight="284.0" prefWidth="351.0">
+                  <GridPane prefHeight="284.0" prefWidth="351.0" stylesheets="@../styles/login-screen.css">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="163.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="188.0" />
@@ -38,52 +38,52 @@
                         <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label prefHeight="44.0" prefWidth="111.0" text="Username" textAlignment="CENTER" GridPane.rowIndex="1">
+                        <Label prefHeight="44.0" prefWidth="111.0" stylesheets="@../styles/login-screen.css" text="Username" textAlignment="CENTER" GridPane.rowIndex="1">
                            <font>
                               <Font name="Ebrima Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="44.0" prefWidth="102.0" text="Password" textAlignment="CENTER" GridPane.rowIndex="2">
+                        <Label prefHeight="44.0" prefWidth="102.0" stylesheets="@../styles/login-screen.css" text="Password" textAlignment="CENTER" GridPane.rowIndex="2">
                            <font>
                               <Font name="Ebrima Bold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="usernameField" prefHeight="25.0" prefWidth="183.0" promptText="Type Username" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <TextField fx:id="usernameField" prefHeight="25.0" prefWidth="183.0" promptText="Type Username" stylesheets="@../styles/login-screen.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
                         </TextField>
-                        <PasswordField fx:id="passwordField" prefHeight="25.0" prefWidth="183.0" promptText="Type Password" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <PasswordField fx:id="passwordField" prefHeight="25.0" prefWidth="183.0" promptText="Type Password" stylesheets="@../styles/login-screen.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
                         </PasswordField>
-                        <Label fx:id="nameLabel" prefHeight="44.0" prefWidth="111.0" text="Name" textAlignment="CENTER">
+                        <Label fx:id="nameLabel" prefHeight="44.0" prefWidth="111.0" stylesheets="@../styles/login-screen.css" text="Name" textAlignment="CENTER">
                            <font>
                               <Font name="Ebrima Bold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="nameTextField" prefHeight="25.0" prefWidth="183.0" promptText="Enter your name" GridPane.columnIndex="1">
+                        <TextField fx:id="nameTextField" prefHeight="32.0" prefWidth="176.0" promptText="Enter your name" stylesheets="@../styles/login-screen.css" GridPane.columnIndex="1">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
                         </TextField>
-                        <Label fx:id="email" layoutX="10.0" layoutY="145.0" prefHeight="44.0" prefWidth="102.0" text="Email" GridPane.rowIndex="3">
+                        <Label fx:id="email" layoutX="10.0" layoutY="145.0" prefHeight="44.0" prefWidth="102.0" stylesheets="@../styles/login-screen.css" text="Email" GridPane.rowIndex="3">
                            <font>
                               <Font name="Ebrima Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="phoneNumber" layoutX="10.0" layoutY="145.0" prefHeight="44.0" prefWidth="146.0" text="Phone Number" textAlignment="CENTER" GridPane.rowIndex="4">
+                        <Label fx:id="phoneNumber" layoutX="10.0" layoutY="145.0" prefHeight="44.0" prefWidth="146.0" stylesheets="@../styles/login-screen.css" text="Phone Number" textAlignment="CENTER" GridPane.rowIndex="4">
                            <font>
                               <Font name="Ebrima Bold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="emailField" layoutX="173.0" layoutY="92.0" prefHeight="25.0" prefWidth="183.0" promptText="Enter your email" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <TextField fx:id="emailField" layoutX="173.0" layoutY="92.0" prefHeight="25.0" prefWidth="183.0" promptText="Enter your email" stylesheets="@../styles/login-screen.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
                         </TextField>
-                        <TextField fx:id="phoneNumberTextField" layoutX="173.0" layoutY="92.0" prefHeight="25.0" prefWidth="183.0" promptText="Enter your phone number" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <TextField fx:id="phoneNumberTextField" layoutX="173.0" layoutY="92.0" prefHeight="25.0" prefWidth="183.0" promptText="Enter your phone number" stylesheets="@../styles/login-screen.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <cursor>
                               <Cursor fx:constant="TEXT" />
                            </cursor>
@@ -93,22 +93,25 @@
                         <Insets bottom="42.0" />
                      </VBox.margin>
                   </GridPane>
-                  <Button fx:id="loginButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" text="Login">
+                  <Button fx:id="loginButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" stylesheets="@../styles/login-screen.css" text="Login">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="registerButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" stylesheets="@../styles/login-screen.css" text="Proceed">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="registerButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" text="Proceed">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Label fx:id="register" text="New user? Click here to register" textFill="#2969c9" underline="true">
+                  <Label fx:id="register" stylesheets="@../styles/login-screen.css" text="New user? Click here to register" textFill="#2969c9" underline="true">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Label>
-                  <Label fx:id="login" text="Already registered? Click here to login" textFill="#2969c9" underline="true">
+                  <Label fx:id="login" stylesheets="@../styles/login-screen.css" text="Already registered? Click here to login" textFill="#2969c9" underline="true">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
